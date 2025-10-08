@@ -18,3 +18,245 @@
   </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>開封中...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="transition.js"></script>
+</head>
+<body>
+  <div class="container fade-in">
+    <h2 class="subtitle">封筒を開けています...</h2>
+    <div class="envelope open">
+      💌
+    </div>
+    <button onclick="nextPage('ticket.html')">チケットを見る</button>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旅のチケット</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="transition.js"></script>
+</head>
+<body>
+  <div class="container fade-in">
+    <div class="tickets">
+      <div class="ticket">
+        <div class="ticket-header">
+          <span>PASSENGER</span><span>BOARDING PASS</span>
+        </div>
+        <div class="ticket-body">
+          <h2>SHOMARU ✈️</h2>
+          <p><strong>FROM:</strong> SECRET</p>
+          <p><strong>TO:</strong> ✨ 秘密の場所 ✨</p>
+          <p><strong>DATE:</strong> 2025 / 11 / 15 – 11 / 17</p>
+          <p><strong>DURATION:</strong> 2泊3日</p>
+        </div>
+        <div class="divider"></div>
+        <div class="ticket-footer">
+          <p>旅の始まりを、君と一緒に。</p>
+          <div class="barcode"></div>
+        </div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-header">
+          <span>PASSENGER</span><span>BOARDING PASS</span>
+        </div>
+        <div class="ticket-body">
+          <h2>AYAKA ✈️</h2>
+          <p><strong>FROM:</strong> SECRET</p>
+          <p><strong>TO:</strong> ✨ 秘密の場所 ✨</p>
+          <p><strong>DATE:</strong> 2025 / 11 / 15 – 11 / 17</p>
+          <p><strong>DURATION:</strong> 2泊3日</p>
+        </div>
+        <div class="divider"></div>
+        <div class="ticket-footer">
+          <p>特別な時間を、あなたと。</p>
+          <div class="barcode"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="message">
+      <p>少し早いけど、誕生日おめでとう。<br>
+      この旅は、君への感謝とこれからの願いを込めて。<br>
+      どこへ行くかは、当日までのお楽しみ。</p>
+    </div>
+
+    <body {
+  margin: 0;
+  font-family: 'Noto Serif JP', serif;
+  color: #3b2f2f;
+  background: linear-gradient(to bottom right, #f7f3ef, #efe7dc);
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  color: #5c4938;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7b6a58;
+  margin-bottom: 20px;
+}
+
+.envelope {
+  font-size: 4rem;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+.envelope:hover {
+  transform: translateY(-8px);
+}
+
+.envelope.open {
+  transform: rotateX(180deg);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: #d2b48c;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #c19b6b;
+}
+
+/* チケット */
+.tickets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.ticket {
+  background: #fff;
+  width: 300px;
+  border: 2px solid #d2b48c;
+  border-radius: 12px;
+  padding: 20px 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.ticket:hover {
+  transform: translateY(-4px);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+
+.ticket-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 0 0 6px 0;
+  color: #2c2c2c;
+}
+
+.divider {
+  border-top: 1px dashed #ccc;
+  margin: 16px 0;
+}
+
+.ticket-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.barcode {
+  width: 100%;
+  height: 40px;
+  background: repeating-linear-gradient(90deg, #333, #333 2px, transparent 2px, transparent 5px);
+  margin-top: 14px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.message {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #5a4a42;
+  line-height: 1.8;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* フェード */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+/* 📱 スマホ対応 */
+@media (max-width: 600px) {
+  .tickets {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ticket {
+    width: 90%;
+    max-width: 360px;
+  }
+}
+
+function nextPage(url) {
+  document.body.classList.add('fade-out');
+  setTimeout(() => {
+    window.location.href = url;
+  }, 700);
+}
+
+window.addEventListener('pageshow', () => {
+  document.body.classList.add('fade-in');
+});
+
+}
+button onclick="nextPage('index.html')">トップに戻る</button>
+  </div>
+</body>
+</html>
